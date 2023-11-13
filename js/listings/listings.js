@@ -119,7 +119,12 @@ export async function getListings(listingsApi, divListings) {
       modalComments.scrollTop = modalComments.scrollHeight;
       const theirProfile = listingDiv.querySelector(`#otherProfile_${seller}`);
       theirProfile.addEventListener("click", () => {
-        if (token == "guest") {
+        if (
+          token == "guest" ||
+          token == null ||
+          token == undefined ||
+          token == ""
+        ) {
           alert("You must be logged in to view profiles");
           return;
         } else {
