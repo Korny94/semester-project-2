@@ -81,7 +81,7 @@ export async function getListings(listingsApi, divListings) {
 
       listingDiv.innerHTML += DOMPurify.sanitize(
         ` 
-        <div class="modal d-flex position-relative me-4" tabindex="-1">
+        <div class="modal d-flex position-relative" tabindex="-1">
             <div class="modal-dialog ">
             <div class="modal-content postModal">
                 <div class="modal-header p-3">

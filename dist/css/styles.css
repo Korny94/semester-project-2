@@ -11892,6 +11892,7 @@ main {
 }
 
 .registerModal {
+  margin-top: 2.5rem;
   box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
 }
 
@@ -11910,9 +11911,9 @@ main {
 
 #listingsDiv,
 #myListingsDiv {
-  padding-left: 3rem;
-  gap: 3rem;
-  width: 100vw;
+  width: 98.7vw;
+  gap: 2rem;
+  padding-left: 1rem;
   display: flex;
   overflow-x: scroll;
   overflow-y: hidden;
@@ -11956,6 +11957,10 @@ a {
   width: 25rem;
   border-radius: 20px;
   box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+}
+
+.modal {
+  margin: 0.4rem;
 }
 
 .modal-comments {
@@ -12013,11 +12018,6 @@ a {
   #modalImage {
     width: 20rem;
   }
-  #listingsDiv,
-  #myListingsDiv {
-    padding-left: 1.5rem;
-    gap: 1.5rem;
-  }
   .creditsDiv {
     right: 5rem;
   }
@@ -12029,11 +12029,6 @@ a {
   #modalImage {
     width: 17rem;
   }
-  #listingsDiv,
-  #myListingsDiv {
-    padding-left: 1rem;
-    gap: 0rem;
-  }
   .creditsDiv {
     right: 4.5rem;
   }
@@ -12043,26 +12038,48 @@ a {
 }
 @media (max-height: 699px) {
   .postModal {
+    scale: 0.9;
+  }
+  .listingDiv {
+    margin-right: 0;
+  }
+  #listingsDiv,
+  #myListingsDiv {
+    height: 99vh;
+    gap: 0;
+    padding: 0;
+  }
+  #myListingsDiv {
+    width: 85vw;
+    margin-left: 10.5rem;
+  }
+}
+@media (max-height: 635px) {
+  .postModal {
     scale: 0.8;
   }
   .listingDiv {
     margin-right: 0;
   }
+  #listingsDiv,
+  #myListingsDiv {
+    height: 99vh;
+    gap: 0;
+    padding: 0;
+  }
 }
-@media (max-height: 599px) {
+@media (max-height: 549px) {
   .postModal {
-    scale: 0.6;
+    scale: 0.7;
   }
   .listingDiv {
     margin-right: 0;
   }
-}
-@media (max-height: 449px) {
-  .postModal {
-    scale: 0.4;
-  }
-  .listingDiv {
-    margin-right: 0;
+  #listingsDiv,
+  #myListingsDiv {
+    height: 99vh;
+    gap: 0;
+    padding: 0;
   }
 }
 
