@@ -119,12 +119,17 @@ export async function getListings(listingsApi, divListings) {
       modalComments.scrollTop = modalComments.scrollHeight;
       const theirProfile = listingDiv.querySelector(`#otherProfile_${seller}`);
       theirProfile.addEventListener("click", () => {
-        localStorage.setItem(
-          "profileApi",
-          api + profiles + "/" + seller + "?_listings=true"
-        );
-        localStorage.setItem("name", seller);
-        location.href = "../../html/myProfile.html";
+        if (token == "guest") {
+          alert("You must be logged in to view profiles");
+          return;
+        } else {
+          localStorage.setItem(
+            "profileApi",
+            api + profiles + "/" + seller + "?_listings=true"
+          );
+          localStorage.setItem("name", seller);
+          location.href = "../../html/myProfile.html";
+        }
       });
       placeBidEventListener(listingId);
     });
