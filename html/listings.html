@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bidazzle</title>
+    <link rel="stylesheet" href="/dist/css/styles.css" />
+    <script
+      src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+      defer
+    ></script>
+    <script src="/js/consts/consts.js" defer type="module"></script>
+    <script src="/js/listings/allListings.js" defer type="module"></script>
+    <script src="/js/listings/newListing.js" defer type="module"></script>
+    <script src="/js/listings/placeBid.js" defer type="module"></script>
+    <script src="/js/functions/functions.js" defer type="module"></script>
+    <script src="/js/profile/myCredits.js" defer type="module"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.6/purify.min.js"
+      integrity="sha512-H+rglffZ6f5gF7UJgvH4Naa+fGCgjrHKMgoFOGmcPTRwR6oILo5R+gtzNrpDp7iMV3udbymBVjkeZGNz1Em4rQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+      <a href="/html/listings.html" class="logoLink"
+        ><img
+          src="/assets/logo.png"
+          class="img-fluid ms-3 logo"
+          alt="biDazzle Logo"
+        />
+      </a>
+      <div class="d-flex align-items-center justify-content-center creditsDiv">
+        <p id="credits" title="Credits left"></p>
+
+        <img
+          src="/assets/credits.png"
+          class="img-fluid me-2 credits"
+          alt="Credits"
+          title="Credits left"
+        />
+        <div class="btn" id="newListing" title="Create new listing">
+          New listing +
+        </div>
+      </div>
+      <button
+        class="navbar-toggler me-3"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div
+        class="collapse navbar-collapse justify-content-end me-3"
+        id="navbarSupportedContent"
+      >
+        <ul class="nav nav-pills d-flex justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link" href="/html/myProfile.html" id="profilePage"
+              >Profile</a
+            >
+          </li>
+
+          <li class="nav-item d-flex">
+            <a
+              class="nav-link active"
+              href="/html/listings.html"
+              id="listingsPage"
+              >Listings</a
+            >
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/index.html">Log out</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <main>
+      <div class="modal-dialog" id="createListing">
+        <div class="modal-content modal-content2">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5">Create a new listing</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+              id="closeListing"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="input-group mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="postTitle"
+                placeholder="Title"
+                aria-label="Title"
+                aria-describedby="basic-addon1"
+              />
+            </div>
+            <div class="input-group mb-3">
+              <input
+                type="datetime-local"
+                class="form-control"
+                id="postDate"
+                aria-describedby="basic-addon1"
+                title="When will the listing end?"
+              />
+            </div>
+            <div class="input-group mb-3">
+              <textarea
+                class="form-control"
+                id="postDescription"
+                placeholder="Description"
+                aria-label="Text"
+                aria-describedby="basic-addon1"
+                style="height: 20vh"
+              ></textarea>
+            </div>
+            <div class="input-group mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="postImage"
+                placeholder="Image URL"
+                aria-label="Image URL"
+                aria-describedby="basic-addon1"
+              />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary me-2"
+              data-bs-dismiss="modal"
+              id="exitListing"
+            >
+              Exit
+            </button>
+            <button type="button" id="postListing" class="btn btn-primary">
+              Post
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="listingsDiv"></div>
+    </main>
+  </body>
+</html>

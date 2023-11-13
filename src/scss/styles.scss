@@ -1,2 +1,226 @@
 @import "../../node_modules/bootstrap/scss/bootstrap";
 @import "variables";
+
+html::-webkit-scrollbar,
+#listingsDiv::-webkit-scrollbar,
+#myListingsDiv::-webkit-scrollbar,
+.modal-comments::-webkit-scrollbar,
+.modal::-webkit-scrollbar,
+.modal-body::-webkit-scrollbar {
+  height: 12px;
+}
+
+html::-webkit-scrollbar-thumb,
+#listingsDiv::-webkit-scrollbar-thumb,
+#myListingsDiv::-webkit-scrollbar-thumb,
+.modal-comments::-webkit-scrollbar-thumb,
+.modal::-webkit-scrollbar-thumb,
+.modal-body::-webkit-scrollbar-thumb {
+  background-color: #94949c6e;
+  border-radius: 4px;
+}
+
+main {
+  background-color: rgb(255, 254, 254);
+}
+
+.logo {
+  width: 4.5rem;
+  margin-bottom: 0.5rem;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.registerModal {
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+}
+
+.credits {
+  width: 1.8rem;
+}
+
+#credits {
+  margin: 0 0.5rem 0.2rem 0;
+}
+
+.creditsDiv {
+  position: absolute;
+  right: 18rem;
+}
+
+#listingsDiv,
+#myListingsDiv {
+  padding-left: 3rem;
+  gap: 3rem;
+  width: 100vw;
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+#myListingsDiv {
+  width: 86vw;
+  margin-left: 14rem;
+}
+
+a {
+  cursor: pointer;
+}
+
+.modal-dialog {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.listingDiv {
+  margin-top: 3rem;
+  height: 90vh;
+}
+
+.modal-profile-image {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+#modalImage {
+  width: 25rem;
+  height: 10rem;
+  object-fit: cover;
+}
+
+.postModal {
+  overflow: hidden;
+  width: 25rem;
+  border-radius: 20px;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+}
+
+.modal-comments {
+  height: 9rem;
+  overflow-y: scroll;
+}
+
+.modal-content2 {
+  border: 1px solid black;
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+  width: 340px;
+}
+
+#createListing {
+  display: none;
+}
+
+.profilePic {
+  min-width: 100px;
+  min-height: 100px;
+  width: 10vw;
+  height: 10vw;
+  border: 1px solid black;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  left: 2rem;
+  top: 40%;
+  cursor: pointer;
+  transition: ease-in-out 0.2s;
+}
+
+#viewBids {
+  position: absolute;
+  left: 4rem;
+  top: 60%;
+  transition: ease-in-out 0.2s;
+}
+
+.profilePic:hover,
+#viewBids:hover {
+  scale: 1.05;
+}
+
+// Media Queries
+
+@media (max-width: 991.5px) {
+  .postModal {
+    width: 20rem;
+  }
+
+  #modalImage {
+    width: 20rem;
+  }
+
+  #listingsDiv,
+  #myListingsDiv {
+    padding-left: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .creditsDiv {
+    right: 5rem;
+  }
+}
+
+@media (max-width: 599px) {
+  .postModal {
+    width: 17rem;
+  }
+
+  #modalImage {
+    width: 17rem;
+  }
+  #listingsDiv,
+  #myListingsDiv {
+    padding-left: 1rem;
+    gap: 0rem;
+  }
+
+  .creditsDiv {
+    right: 4.5rem;
+  }
+
+  #newListing {
+    padding-left: 0rem;
+  }
+}
+
+@media (max-height: 699px) {
+  .postModal {
+    scale: 0.8;
+  }
+  .listingDiv {
+    margin-right: 0;
+  }
+}
+
+@media (max-height: 599px) {
+  .postModal {
+    scale: 0.6;
+  }
+
+  .listingDiv {
+    margin-right: 0;
+  }
+}
+
+@media (max-height: 449px) {
+  .postModal {
+    scale: 0.4;
+  }
+  .listingDiv {
+    margin-right: 0;
+  }
+}
