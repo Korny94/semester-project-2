@@ -68,6 +68,7 @@ main {
   display: flex;
   overflow-x: scroll;
   overflow-y: hidden;
+  margin-top: auto;
 }
 
 #myListingsDiv {
@@ -145,7 +146,7 @@ a {
   object-fit: cover;
   position: absolute;
   left: 2rem;
-  top: 40%;
+  top: 50%;
   cursor: pointer;
   transition: ease-in-out 0.2s;
 }
