@@ -11874,6 +11874,10 @@ html::-webkit-scrollbar-thumb,
   border-radius: 4px;
 }
 
+nav {
+  z-index: 100;
+}
+
 main {
   background-color: rgb(255, 254, 254);
 }
@@ -11911,6 +11915,7 @@ main {
 
 #listingsDiv,
 #myListingsDiv {
+  z-index: 99;
   width: 98.7vw;
   gap: 2rem;
   padding-left: 1rem;
@@ -12034,6 +12039,9 @@ a {
   }
   #newListing {
     padding-left: 0rem;
+  }
+  .profilePic {
+    left: 1.3rem;
   }
 }
 @media (max-height: 699px) {
