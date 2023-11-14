@@ -93,7 +93,6 @@ export async function getListings(listingsApi, divListings) {
                     <img class="modal-profile-image me-2" src="${imageProfile}" alt="" />
                     <h5 class="modal-name m-0">${seller}</h5>
                 </div>
-                    <button type="button" class="btn-close" title="${listingId}" alt="${seller}" id="deletePost" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-image">
                   <img id="modalImage" src="${image}" alt="" />
@@ -121,6 +120,7 @@ export async function getListings(listingsApi, divListings) {
       divListings.appendChild(listingDiv);
       const modalComments = listingDiv.querySelector(".modal-comments");
       modalComments.scrollTop = modalComments.scrollHeight;
+
       const theirProfile = listingDiv.querySelector(`#otherProfile_${seller}`);
       theirProfile.addEventListener("click", () => {
         if (
