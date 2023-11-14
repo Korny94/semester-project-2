@@ -1,5 +1,4 @@
 @import "../../node_modules/bootstrap/scss/bootstrap";
-@import "variables";
 
 html::-webkit-scrollbar,
 #listingsDiv::-webkit-scrollbar,
@@ -223,5 +222,78 @@ a {
 
   #listingsDiv {
     gap: 0;
+  }
+}
+
+/* LOADING */
+.loader {
+  position: absolute;
+  animation: rotate 1s infinite;
+  height: 50px;
+  width: 50px;
+  margin-top: 7rem;
+  margin-bottom: 18rem;
+  scale: 1.5;
+}
+
+.loader:before,
+.loader:after {
+  border-radius: 50%;
+  content: "";
+  display: block;
+  height: 20px;
+  width: 20px;
+}
+.loader:before {
+  animation: ball1 1s infinite;
+  background-color: #ededed;
+  box-shadow: 30px 0 0 #0d6dfd9e;
+  margin-bottom: 10px;
+}
+.loader:after {
+  animation: ball2 1s infinite;
+  background-color: #0d6dfd9e;
+  box-shadow: 30px 0 0 #ededed;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) scale(0.8);
+  }
+  50% {
+    transform: rotate(360deg) scale(1.2);
+  }
+  100% {
+    transform: rotate(720deg) scale(0.8);
+  }
+}
+
+@keyframes ball1 {
+  0% {
+    box-shadow: 30px 0 0 #0d6dfd9e;
+  }
+  50% {
+    box-shadow: 0 0 0 #0d6dfd9e;
+    margin-bottom: 0;
+    transform: translate(15px, 15px);
+  }
+  100% {
+    box-shadow: 30px 0 0 #0d6dfd9e;
+    margin-bottom: 10px;
+  }
+}
+
+@keyframes ball2 {
+  0% {
+    box-shadow: 30px 0 0 #ededed;
+  }
+  50% {
+    box-shadow: 0 0 0 #ededed;
+    margin-top: -20px;
+    transform: translate(15px, 15px);
+  }
+  100% {
+    box-shadow: 30px 0 0 #ededed;
+    margin-top: 0;
   }
 }

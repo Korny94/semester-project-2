@@ -40,3 +40,4 @@ export const apiProfile = localStorage.getItem("profileApi");
 export const viewBids = document.getElementById("viewBids");
 export const myProfileApi = api + profiles + "/" + name + "/media";
 export const myBidsApi = api + profiles + "/" + name + "/bids?_listings=true";
+export const loader = document.getElementById("loader");

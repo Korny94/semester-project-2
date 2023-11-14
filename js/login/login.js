@@ -44,8 +44,9 @@ async function loginUser() {
       "profileApi",
       api + profiles + "/" + json.name + "?_listings=true"
     );
-
-    location.href = "../../html/listings.html";
+    if (response.ok) {
+      location.href = "../../html/listings.html";
+    }
   } catch (error) {
     console.error(error);
   }

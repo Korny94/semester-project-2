@@ -6,6 +6,7 @@ import {
   profiles,
   myName,
   active,
+  loader,
 } from "../consts/consts.js";
 import { calculateTimeRemaining } from "../functions/functions.js";
 import { placeBidEventListener } from "./placeBid.js";
@@ -37,6 +38,9 @@ export async function getListings(listingsApi, divListings) {
 
     const response = await fetch(listingsApi, listingData);
     const json = await response.json();
+    if (response.ok) {
+      loader.style.display = "none";
+    }
 
     const sortedPosts = json.sort(
       (a, b) => new Date(b.created) - new Date(a.created)
