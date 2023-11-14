@@ -11888,6 +11888,14 @@ main {
   margin-bottom: 0.5rem;
 }
 
+.logoLink2 {
+  background-image: url("../../assets/logo.png");
+  width: 75px;
+  height: 16px;
+  background-size: cover;
+  margin: 0 0 0.5rem 1rem;
+}
+
 main {
   min-height: 100vh;
   display: flex;
@@ -12027,6 +12035,15 @@ a {
   }
 }
 @media (max-width: 599px) {
+  .logoLink2 {
+    background-image: url("../../assets/logo-short.png");
+    margin-bottom: 0.3rem;
+    width: 28px;
+    height: 16px;
+  }
+  .creditsDiv {
+    margin-left: 1rem;
+  }
   .postModal {
     width: 17rem;
   }
