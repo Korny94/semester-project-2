@@ -12045,7 +12045,11 @@ a {
   }
   #myListingsDiv {
     width: 100vw;
-    margin-top: 1rem;
+    margin-top: 5rem;
+    gap: 0;
+  }
+  #listingsDiv {
+    gap: 0;
   }
 }
 
