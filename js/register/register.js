@@ -5,6 +5,7 @@ import {
   registerUsername,
   registerEmail,
   registerPassword,
+  registerModal,
 } from "../consts/consts.js";
 
 registerBtn.addEventListener("click", () => {
@@ -26,7 +27,7 @@ async function registerUser() {
     };
     const response = await fetch(api + register, userData);
     const json = await response.json();
-    if (json.ok) {
+    if (response.ok) {
       registerModal.style.display = "none";
       loginModal.style.display = "block";
     }

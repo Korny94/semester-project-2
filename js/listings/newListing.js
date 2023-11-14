@@ -74,7 +74,7 @@ async function newListing() {
     if (json.errors) {
       alert(json.errors[0].message);
     }
-    if (json.ok) {
+    if (response.ok) {
       location.reload();
     }
   } catch (error) {
