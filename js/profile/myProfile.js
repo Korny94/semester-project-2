@@ -37,7 +37,9 @@ export async function getProfile(profileApi) {
     const response = await fetch(profileApi, userData);
     const json = await response.json();
     console.log(json);
-    profilePic.src = json.avatar;
+    profilePic.src = json.avatar
+      ? json.avatar
+      : "https://cdn.pixabay.com/photo/2017/02/16/12/01/professions-2071316_1280.jpg";
   } catch (error) {
     console.error(error);
   }

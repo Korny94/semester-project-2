@@ -13,10 +13,14 @@ import {
   postDescription,
   postImage,
   myListingsDiv,
+  profilePic,
 } from "../consts/consts.js";
 
 exitListing.addEventListener("click", () => {
   createListing.style.display = "none";
+  if (profilePic) {
+    profilePic.style.display = "flex";
+  }
   if (listingsDiv) {
     listingsDiv.style.display = "flex";
   } else {
@@ -26,6 +30,10 @@ exitListing.addEventListener("click", () => {
 
 closeListing.addEventListener("click", () => {
   createListing.style.display = "none";
+  if (profilePic) {
+    profilePic.style.display = "flex";
+  }
+
   if (listingsDiv) {
     listingsDiv.style.display = "flex";
   } else {
@@ -35,6 +43,9 @@ closeListing.addEventListener("click", () => {
 
 newListings.addEventListener("click", () => {
   createListing.style.display = "flex";
+  if (profilePic) {
+    profilePic.style.display = "none";
+  }
   if (listingsDiv) {
     listingsDiv.style.display = "none";
   } else {

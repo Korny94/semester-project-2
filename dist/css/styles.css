@@ -11879,10 +11879,6 @@ nav {
   min-width: 100vw;
 }
 
-.collapse {
-  margin-top: 1rem;
-}
-
 main {
   background-color: rgb(255, 254, 254);
 }
@@ -12039,6 +12035,9 @@ a {
   }
 }
 @media (max-width: 599px) {
+  .collapse {
+    margin-top: 1rem;
+  }
   .logoLink2 {
     background-image: url("../../assets/logo-short.png");
     margin-bottom: 0.3rem;
