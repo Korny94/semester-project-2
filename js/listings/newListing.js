@@ -14,7 +14,12 @@ import {
   postImage,
   myListingsDiv,
   profilePic,
+  currentDate,
 } from "../consts/consts.js";
+
+currentDate.setHours(currentDate.getHours() + 2);
+const twoHoursLater = currentDate.toISOString().slice(0, 16);
+postDate.value = twoHoursLater;
 
 exitListing.addEventListener("click", () => {
   createListing.style.display = "none";
