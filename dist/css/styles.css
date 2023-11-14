@@ -11890,10 +11890,10 @@ main {
 
 .logoLink2 {
   background-image: url("../../assets/logo.png");
-  width: 75px;
-  height: 16px;
+  width: 80px;
+  height: 18px;
   background-size: cover;
-  margin: 0 0 0.5rem 1rem;
+  margin: 0 0 0.3rem 1rem;
 }
 
 main {
@@ -12038,7 +12038,7 @@ a {
   .logoLink2 {
     background-image: url("../../assets/logo-short.png");
     margin-bottom: 0.3rem;
-    width: 31px;
+    width: 27px;
     height: 16px;
   }
   .creditsDiv {
