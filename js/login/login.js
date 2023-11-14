@@ -12,11 +12,12 @@ loginBtn.addEventListener("click", () => {
 });
 
 async function loginUser() {
+  const lowerCaseEmail = loginEmail.value.toLowerCase();
   try {
     const loginData = {
       method: "POST",
       body: JSON.stringify({
-        email: loginEmail.value,
+        email: lowerCaseEmail.trim(),
         password: loginPassword.value,
       }),
       headers: {

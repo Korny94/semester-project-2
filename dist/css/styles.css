@@ -11879,6 +11879,10 @@ nav {
   min-width: 100vw;
 }
 
+.collapse {
+  margin-top: 1rem;
+}
+
 main {
   background-color: rgb(255, 254, 254);
 }
@@ -11905,7 +11909,7 @@ main {
 }
 
 .registerModal {
-  margin-top: 2.5rem;
+  margin-top: 6rem;
   box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
 }
 
