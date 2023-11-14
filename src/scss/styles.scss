@@ -87,7 +87,7 @@ a {
 
 .listingDiv {
   margin-top: 3rem;
-  height: 90vh;
+  height: 38rem;
 }
 
 .modal-profile-image {
@@ -201,53 +201,4 @@ a {
 }
 
 @media (max-height: 699px) {
-  .postModal {
-    scale: 0.9;
-  }
-  .listingDiv {
-    margin-right: 0;
-  }
-  #listingsDiv,
-  #myListingsDiv {
-    height: 99vh;
-    gap: 0;
-    padding: 0;
-  }
-
-  #myListingsDiv {
-    width: 85vw;
-    margin-left: 10.5rem;
-  }
-}
-
-@media (max-height: 635px) {
-  .postModal {
-    scale: 0.8;
-  }
-
-  .listingDiv {
-    margin-right: 0;
-  }
-  #listingsDiv,
-  #myListingsDiv {
-    height: 99vh;
-    gap: 0;
-    padding: 0;
-  }
-}
-
-@media (max-height: 549px) {
-  .postModal {
-    scale: 0.7;
-  }
-  .listingDiv {
-    margin-right: 0;
-  }
-
-  #listingsDiv,
-  #myListingsDiv {
-    height: 99vh;
-    gap: 0;
-    padding: 0;
-  }
 }

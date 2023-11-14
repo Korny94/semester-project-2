@@ -46,12 +46,18 @@ export async function getProfile(profileApi) {
 getProfile(apiProfile);
 
 profilePic.addEventListener("click", () => {
-  const avatar = prompt("Input image URL to change your profile picture");
   if (name == "guest") {
     alert("You must be logged in to change your profile picture");
     return;
-  } else if (avatar !== "") {
-    updateProfile(avatar, myProfileApi);
+  } else if (name != myName) {
+    alert("You can only change your own profile picture");
+  } else {
+    const avatar = prompt("Input image URL to change your profile picture");
+    if (avatar == null || avatar == "") {
+      console.log("User cancelled the prompt");
+    } else {
+      updateProfile(avatar, myProfileApi);
+    }
   }
 });
 
