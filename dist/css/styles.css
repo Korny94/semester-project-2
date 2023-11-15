@@ -12039,6 +12039,7 @@ a {
   }
   .registerModal {
     width: 90vw;
+    margin-top: 1rem;
   }
   .logoLink2 {
     background-image: url("../../assets/logo-short.png");
