@@ -12067,7 +12067,7 @@ a {
   }
   #myListingsDiv {
     width: 100vw;
-    margin-top: 1.5rem;
+    margin-top: 0.5rem;
     gap: 0;
     max-height: 36rem;
   }
