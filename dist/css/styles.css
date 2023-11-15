@@ -12037,6 +12037,9 @@ a {
   .collapse {
     margin-top: 1rem;
   }
+  .registerModal {
+    width: 90vw;
+  }
   .logoLink2 {
     background-image: url("../../assets/logo-short.png");
     margin-bottom: 0.3rem;
@@ -12064,11 +12067,14 @@ a {
   }
   #myListingsDiv {
     width: 100vw;
-    margin-top: 5rem;
+    margin-top: 3rem;
     gap: 0;
+    max-height: 36rem;
   }
   #listingsDiv {
     gap: 0;
+    max-height: 36rem;
+    margin-top: -3rem;
   }
   .modal-comments {
     height: 6rem;
