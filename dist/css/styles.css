@@ -12097,9 +12097,13 @@ a {
   .modal-comments {
     height: 6rem;
   }
-  #myListingsDiv,
-  #listingsDiv {
-    height: 97vh;
+  #listingsDiv,
+  #myListingsDiv {
+    max-height: 35rem;
+    margin-top: -3rem;
+  }
+  .profilePic {
+    margin-top: -5rem;
   }
 }
 /* LOADING */
