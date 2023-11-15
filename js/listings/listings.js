@@ -86,7 +86,7 @@ export async function getListings(listingsApi, divListings) {
       listingDiv.innerHTML += DOMPurify.sanitize(
         ` 
         <div class="modal d-flex position-relative" tabindex="-1">
-            <div class="modal-dialog ">
+            <div class="modal-dialog m-2 d-block">
             <div class="modal-content postModal">
                 <div class="modal-header p-3">
                 <div class="profileLink d-flex align-items-center" style="cursor: pointer" id="otherProfile_${seller}" title="${seller}">

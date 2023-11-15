@@ -11876,7 +11876,7 @@ html::-webkit-scrollbar-thumb,
 
 nav {
   z-index: 100;
-  min-width: 100vw;
+  position: absolute;
 }
 
 main {
@@ -11948,7 +11948,6 @@ a {
 }
 
 .listingDiv {
-  margin-top: 3rem;
   height: 38rem;
 }
 
@@ -12070,6 +12069,25 @@ a {
   }
   #listingsDiv {
     gap: 0;
+  }
+  .modal-comments {
+    height: 6rem;
+  }
+}
+@media (max-height: 699px) {
+  .postModal {
+    width: 17rem;
+  }
+  #modalImage {
+    width: 17rem;
+    height: 8rem;
+  }
+  .modal-comments {
+    height: 6rem;
+  }
+  #myListingsDiv,
+  #listingsDiv {
+    height: 97vh;
   }
 }
 /* LOADING */
