@@ -11885,7 +11885,7 @@ main {
 
 .logo {
   width: 4.5rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
 }
 
 .logoLink2 {
@@ -12022,6 +12022,12 @@ a {
 }
 
 @media (max-width: 991.5px) {
+  .registerModal {
+    margin-top: 2rem;
+  }
+  .logo {
+    margin-top: 0.4rem;
+  }
   .creditsDiv {
     position: relative;
     right: 0rem;
@@ -12039,7 +12045,6 @@ a {
   }
   .registerModal {
     width: 90vw;
-    margin-top: 2rem;
   }
   .logoLink2 {
     background-image: url("../../assets/logo-short.png");
