@@ -265,6 +265,13 @@ a {
   }
 }
 
+@media (orientation: portrait) and (min-height: 700px) {
+  #listingsDiv,
+  #myListingsDiv {
+    margin-top: 4rem;
+  }
+}
+
 /* LOADING */
 .loader {
   position: absolute;
