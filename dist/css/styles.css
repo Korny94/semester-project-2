@@ -11897,7 +11897,6 @@ main {
 }
 
 main {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11905,7 +11904,7 @@ main {
 }
 
 .registerModal {
-  margin-top: 5rem;
+  margin-top: 7rem;
   box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
 }
 
@@ -11924,6 +11923,7 @@ main {
 
 #listingsDiv,
 #myListingsDiv {
+  margin-top: 1rem;
   z-index: 99;
   width: 98.7vw;
   gap: 2rem;
