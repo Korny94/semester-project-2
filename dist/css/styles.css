@@ -12022,9 +12022,6 @@ a {
 }
 
 @media (max-width: 991.5px) {
-  .registerModal {
-    margin-top: 2rem;
-  }
   .logo {
     margin-top: 0.4rem;
   }
