@@ -11879,10 +11879,6 @@ nav {
   position: absolute;
 }
 
-main {
-  background-color: rgb(255, 254, 254);
-}
-
 .logo {
   width: 4.5rem;
   margin-bottom: 0.4rem;
@@ -11897,6 +11893,8 @@ main {
 }
 
 main {
+  min-height: 80vh;
+  background-color: rgb(255, 254, 254);
   display: flex;
   flex-direction: column;
   justify-content: center;
