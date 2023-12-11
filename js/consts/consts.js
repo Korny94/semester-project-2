@@ -4,6 +4,10 @@ export const login = "/auction/auth/login";
 export const listings = "/auction/listings";
 export const profiles = "/auction/profiles";
 
+export const arrowLeftAll = document.getElementById("arrowLeftAll");
+export const arrowRightAll = document.getElementById("arrowRightAll");
+export const arrowLeftMy = document.getElementById("arrowLeftMy");
+export const arrowRightMy = document.getElementById("arrowRightMy");
 export const token = localStorage.getItem("token");
 export const listingsDiv = document.getElementById("listingsDiv");
 export const credits = document.getElementById("credits");

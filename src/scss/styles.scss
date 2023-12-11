@@ -19,12 +19,48 @@ html::-webkit-scrollbar-thumb,
   border-radius: 4px;
 }
 
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #94949c6e;
+}
+
+html * {
+  scrollbar-width: thin;
+  scrollbar-color: #94949c6e;
+}
+
 nav {
   z-index: 100;
   position: absolute;
 }
 
-main {
+.arrowLeft,
+.arrowRight {
+  z-index: 100;
+  position: absolute;
+  top: 27rem;
+  width: 5vw;
+  opacity: 0.2;
+  cursor: pointer;
+  transition: ease-in-out 0.2s;
+}
+
+.arrowLeft:hover,
+.arrowRight:hover {
+  opacity: 0.4;
+  scale: 1.1;
+}
+
+.arrowLeft {
+  left: 1rem;
+}
+
+.arrowRight {
+  right: 1rem;
+}
+
+#arrowLeftMy {
+  left: 7rem;
 }
 
 .logo {
@@ -170,6 +206,10 @@ a {
 // Media Queries
 
 @media (max-width: 991.5px) {
+  .arrowLeft,
+  .arrowRight {
+    display: none;
+  }
   .logo {
     margin-top: 0.4rem;
   }

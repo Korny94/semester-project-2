@@ -11874,9 +11874,48 @@ html::-webkit-scrollbar-thumb,
   border-radius: 4px;
 }
 
+html {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(148, 148, 156, 0.431372549);
+}
+
+html * {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(148, 148, 156, 0.431372549);
+}
+
 nav {
   z-index: 100;
   position: absolute;
+}
+
+.arrowLeft,
+.arrowRight {
+  z-index: 100;
+  position: absolute;
+  top: 27rem;
+  width: 5vw;
+  opacity: 0.2;
+  cursor: pointer;
+  transition: ease-in-out 0.2s;
+}
+
+.arrowLeft:hover,
+.arrowRight:hover {
+  opacity: 0.4;
+  scale: 1.1;
+}
+
+.arrowLeft {
+  left: 1rem;
+}
+
+.arrowRight {
+  right: 1rem;
+}
+
+#arrowLeftMy {
+  left: 7rem;
 }
 
 .logo {
@@ -12020,6 +12059,10 @@ a {
 }
 
 @media (max-width: 991.5px) {
+  .arrowLeft,
+  .arrowRight {
+    display: none;
+  }
   .logo {
     margin-top: 0.4rem;
   }
