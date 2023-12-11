@@ -138,6 +138,9 @@ export async function getListings(listingsApi, divListings) {
       placeBidEventListener(listingId);
     });
   } catch (error) {
+    loader.style.display = "none";
+    divListings.innerHTML = "<h2>Something went wrong, please try again!</h2>";
+    divListings.style.color = "red";
     console.error(error);
   }
 }

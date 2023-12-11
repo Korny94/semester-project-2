@@ -11,6 +11,20 @@ loginBtn.addEventListener("click", () => {
   loginUser();
 });
 
+loginEmail.addEventListener("keyup", (event) => {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    loginUser();
+  }
+});
+
+loginPassword.addEventListener("keyup", (event) => {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    loginUser();
+  }
+});
+
 async function loginUser() {
   const lowerCaseEmail = loginEmail.value.toLowerCase();
   try {
@@ -28,11 +42,7 @@ async function loginUser() {
     const json = await response.json();
 
     if (json.errors) {
-      if (json.errors[0].message == "Email must be a valid email") {
-        alert("Email must be a valid email ending in @stud.noroff.no");
-      } else {
-        alert("Invalid password");
-      }
+      alert(json.errors[0].message);
     }
 
     localStorage.setItem("token", json.accessToken);
