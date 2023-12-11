@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bidazzle</title>
+    <link rel="icon" href="/assets/icon.png" />
+    <link rel="stylesheet" href="/dist/css/styles.css" />
+    <script src="/src/scss/bootstrap.bundle.min.js" defer></script>
+    <script src="/js/index.js" defer type="module"></script>
+    <script src="/js/register/register.js" defer type="module"></script>
+    <script src="/js/consts/consts.js" defer type="module"></script>
+    <script src="/js/login/login.js" defer type="module"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+      <a href="/index.html" class="logoLink"
+        ><img
+          src="/assets/logo.png"
+          class="img-fluid ms-3 logo"
+          alt="biDazzle Logo"
+        />
+      </a>
+      <button
+        class="navbar-toggler me-3"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div
+        class="collapse navbar-collapse justify-content-end me-3"
+        id="navbarSupportedContent"
+      >
+        <ul class="nav nav-pills d-flex justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link disabled" aria-disabled="true">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" aria-disabled="true">Listings</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/index.html"
+              >Log in</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <main>
+      <div
+        class="modal position-relative justify-content-center"
+        id="welcomeModal"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content p-2 welcomeModal" style="min-width: 30vw">
+            <div class="modal-header d-flex justify-content-center">
+              <h5 class="modal-title" id="createActTitle">
+                Welcome To biDazzle!
+              </h5>
+            </div>
+            <div class="modal-body">
+              <h6 class="text-center">
+                biDazzle is a platform for students to buy, sell and bid on
+                eachothers products.
+              </h6>
+              <h6 class="text-center">
+                To get started, you can either create an account, log in as a
+                user or guest.
+              </h6>
+            </div>
+            <div
+              class="modal-footer d-flex align-items-center justify-content-center ps-0 pe-0"
+            >
+              <button
+                type="button"
+                id="welcomeRegisterBtn"
+                class="btn btn-primary welcomeBtns m-2"
+              >
+                Create account
+              </button>
+              <button
+                type="button"
+                id="welcomeLoginBtn"
+                class="btn btn-primary welcomeBtns m-2"
+              >
+                Log in
+              </button>
+              <button
+                type="button"
+                id="welcomeGuestBtn"
+                class="btn btn-secondary welcomeBtns m-2"
+              >
+                Guest login
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="modal position-relative justify-content-center"
+        id="registerModal"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content p-2 registerModal" style="min-width: 30vw">
+            <div class="modal-header">
+              <h5 class="modal-title" id="createActTitle">
+                Create a new account
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                id="closeRegisterModal"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">@</span>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="registerUsername"
+                  placeholder="Username"
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                />
+              </div>
+              <div class="input-group mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="registerEmail"
+                  placeholder="email@stud.noroff.no"
+                  aria-label="Your Email"
+                  aria-describedby="basic-addon2"
+                />
+              </div>
+              <div class="input-group mb-3">
+                <input
+                  type="password"
+                  class="form-control"
+                  id="registerPassword"
+                  placeholder="Password (min 8 characters)"
+                  aria-label="Password"
+                  aria-describedby="basic-addon1"
+                />
+              </div>
+            </div>
+            <div
+              class="modal-footer d-flex align-items-center justify-content-center ps-0 pe-0"
+            >
+              <button
+                type="button"
+                id="registerBtn"
+                class="btn btn-primary m-2"
+              >
+                Create account
+              </button>
+              <button
+                type="button"
+                id="guestLoginBtn2"
+                class="btn btn-secondary m-2"
+              >
+                Guest login
+              </button>
+            </div>
+            <div
+              class="modal-footer d-flex align-items-center justify-content-center"
+            >
+              <p class="m-2">
+                Already have an account?
+                <span><a href="#" id="signInLink">Sign In</a></span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <span class="" id="loader"></span>
+
+      <div
+        class="modal position-relative justify-content-center"
+        id="loginModal"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content p-2 registerModal" style="min-width: 30vw">
+            <div class="modal-header">
+              <h5 class="modal-title" id="loginTitle">
+                Log in to your account
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                id="closeLoginModal"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="input-group mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="loginEmail"
+                  placeholder="Email"
+                  aria-label="Email"
+                  aria-describedby="basic-addon1"
+                />
+              </div>
+              <div class="input-group mb-3">
+                <input
+                  type="password"
+                  class="form-control"
+                  id="loginPassword"
+                  placeholder="Password (min 8 characters)"
+                  aria-label="Password"
+                  aria-describedby="basic-addon1"
+                />
+              </div>
+            </div>
+            <div
+              class="modal-footer d-flex align-items-center justify-content-center ps-0 pe-0"
+            >
+              <button type="submit" id="loginBtn" class="btn btn-primary m-2">
+                Log in
+              </button>
+              <button
+                type="button"
+                id="guestLoginBtn"
+                class="btn btn-secondary m-2"
+              >
+                Guest login
+              </button>
+            </div>
+            <div
+              class="modal-footer d-flex align-items-center justify-content-center"
+            >
+              <p class="m-2">
+                Don't have an account?
+                <span><a href="#" id="signUpLink">Sign up</a></span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
