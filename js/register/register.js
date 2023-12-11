@@ -12,6 +12,24 @@ registerBtn.addEventListener("click", () => {
   registerUser();
 });
 
+registerUsername.addEventListener("keyup", (event) => {
+  if (event.keyCode === 13) {
+    registerUser();
+  }
+});
+
+registerEmail.addEventListener("keyup", (event) => {
+  if (event.keyCode === 13) {
+    registerUser();
+  }
+});
+
+registerPassword.addEventListener("keyup", (event) => {
+  if (event.keyCode === 13) {
+    registerUser();
+  }
+});
+
 async function registerUser() {
   try {
     const userData = {
@@ -30,6 +48,7 @@ async function registerUser() {
     if (response.ok) {
       registerModal.style.display = "none";
       loginModal.style.display = "block";
+      alert("Registration successful, please log in");
     }
 
     if (json.errors) {
