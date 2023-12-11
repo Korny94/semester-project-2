@@ -5,6 +5,7 @@ import {
   profiles,
   arrowLeftMy,
   arrowRightMy,
+  loader,
 } from "../consts/consts.js";
 
 const myListingsApi =
@@ -14,6 +15,12 @@ const myListingsApi =
   localStorage.getItem("name") +
   "/listings?_seller=true&_bids=true";
 getListings(myListingsApi, myListingsDiv);
+
+if (myListingsDiv.innerHTML == "") {
+  setTimeout(() => {
+    myListingsDiv.innerHTML = "<h2>No listings found!</h2>";
+  }, 3000);
+}
 
 arrowLeftMy.addEventListener("click", () => {
   myListingsDiv.style.scrollBehavior = "smooth";

@@ -7,9 +7,13 @@ import {
   myName,
   active,
   loader,
+  search,
+  listingsDiv,
+  myListingsDiv,
 } from "../consts/consts.js";
 import { calculateTimeRemaining } from "../functions/functions.js";
 import { placeBidEventListener } from "./placeBid.js";
+
 credits.innerHTML = "$" + localStorage.getItem("credits");
 
 if (token == "guest") {
@@ -23,33 +27,42 @@ if (active) {
     api + profiles + "/" + myName + "?_listings=true"
   );
 }
-export async function getListings(listingsApi, divListings) {
+export async function getListings(listingsApi, divListings, searchPrompt) {
   try {
     const listingData = {
       method: "GET",
       headers: {
+        Authorization: `Bearer ${token}`,
         "Content-Type": "application/json",
-        authorization: `Bearer ${token}`,
       },
     };
 
     const response = await fetch(listingsApi, listingData);
     const json = await response.json();
+    console.log(json);
+
     if (response.ok) {
       loader.style.display = "none";
     }
 
-    const sortedPosts = json.sort(
-      (a, b) => new Date(b.created) - new Date(a.created)
-    );
+    divListings.innerHTML = "";
+    json.forEach((listing) => {
+      const jsonTags = listing.tags || [];
+      const jsonTitle = listing.title || "";
+      const jsonDescription = listing.description || "";
 
-    sortedPosts.forEach((listing) => {
-      let bidsHTML = "";
+      // Ensure jsonDescription is not null before using .includes()
+      if (
+        jsonTitle.includes(searchPrompt) ||
+        (jsonTags.length > 0 && jsonTags.includes(searchPrompt)) ||
+        (jsonDescription && jsonDescription.includes(searchPrompt))
+      ) {
+        let bidsHTML = "";
 
-      const bids = listing.bids ? listing.bids : [];
-      bids.forEach((bid) => {
-        const bidder = bid.bidderName;
-        bidsHTML += `
+        const bids = listing.bids ? listing.bids : [];
+        bids.forEach((bid) => {
+          const bidder = bid.bidderName;
+          bidsHTML += `
           <div class="modal-comment border d-flex m-2 p-1 pb-3" style="border-radius: 10px">
               <div title="${bidder}" class="profileLink d-flex align-items-center">
                   <h6 class="modal-comment-name m-0 ms-3 mt-2">${bidder}:</h6>
@@ -60,26 +73,26 @@ export async function getListings(listingsApi, divListings) {
               </div>
           </div>
           `;
-      });
+        });
 
-      const listingDiv = document.createElement("div");
-      listingDiv.setAttribute("class", "listingDiv");
-      const image = listing.media[0]
-        ? listing.media[0]
-        : "https://cdn.pixabay.com/photo/2017/10/26/17/37/auction-2891804_1280.jpg";
-      const imageProfile = listing.seller.avatar
-        ? listing.seller.avatar
-        : "https://cdn.pixabay.com/photo/2017/02/16/12/01/professions-2071316_1280.jpg";
-      const title = listing.title;
-      const description = listing.description;
-      const seller = listing.seller.name;
-      const endsAt = listing.endsAt;
-      const listingId = listing.id;
+        const listingDiv = document.createElement("div");
+        listingDiv.setAttribute("class", "listingDiv");
+        const image = listing.media[0]
+          ? listing.media[0]
+          : "https://cdn.pixabay.com/photo/2017/10/26/17/37/auction-2891804_1280.jpg";
+        const imageProfile = listing.seller.avatar
+          ? listing.seller.avatar
+          : "https://cdn.pixabay.com/photo/2017/02/16/12/01/professions-2071316_1280.jpg";
+        const title = listing.title;
+        const description = listing.description;
+        const seller = listing.seller.name;
+        const endsAt = listing.endsAt;
+        const listingId = listing.id;
 
-      const listingMessage = calculateTimeRemaining(endsAt);
+        const listingMessage = calculateTimeRemaining(endsAt);
 
-      listingDiv.innerHTML += DOMPurify.sanitize(
-        ` 
+        listingDiv.innerHTML += DOMPurify.sanitize(
+          ` 
         <div class="modal d-flex position-relative" tabindex="-1">
             <div class="modal-dialog m-2 d-block">
             <div class="modal-content postModal">
@@ -111,36 +124,46 @@ export async function getListings(listingsApi, divListings) {
             </div>
         </div>
       </div>`
-      );
-      divListings.appendChild(listingDiv);
-      const modalComments = listingDiv.querySelector(".modal-comments");
-      modalComments.scrollTop = modalComments.scrollHeight;
+        );
+        divListings.appendChild(listingDiv);
+        const modalComments = listingDiv.querySelector(".modal-comments");
+        modalComments.scrollTop = modalComments.scrollHeight;
 
-      const theirProfile = listingDiv.querySelector(`#otherProfile_${seller}`);
-      theirProfile.addEventListener("click", () => {
-        if (
-          token == "guest" ||
-          token == null ||
-          token == undefined ||
-          token == ""
-        ) {
-          alert("You must be logged in to view profiles");
-          return;
-        } else {
-          localStorage.setItem(
-            "profileApi",
-            api + profiles + "/" + seller + "?_listings=true"
-          );
-          localStorage.setItem("name", seller);
-          location.href = "../../html/myProfile.html";
-        }
-      });
-      placeBidEventListener(listingId);
+        const theirProfile = listingDiv.querySelector(
+          `#otherProfile_${seller}`
+        );
+        theirProfile.addEventListener("click", () => {
+          if (
+            token == "guest" ||
+            token == null ||
+            token == undefined ||
+            token == ""
+          ) {
+            alert("You must be logged in to view profiles");
+            return;
+          } else {
+            localStorage.setItem(
+              "profileApi",
+              api + profiles + "/" + seller + "?_listings=true"
+            );
+            localStorage.setItem("name", seller);
+            location.href = "../../html/myProfile.html";
+          }
+        });
+        placeBidEventListener(listingId);
+      }
     });
+    if (divListings.innerHTML == "") {
+      loader.style.display = "block";
+      setTimeout(() => {
+        loader.style.display = "none";
+        divListings.innerHTML = "<h2>No results found</h2>";
+      }, 2000);
+    }
   } catch (error) {
+    listingsDiv.innerHTML =
+      "<h2>Oops, something went wrong.. Please try again!</h2>";
     loader.style.display = "none";
-    divListings.innerHTML = "<h2>Something went wrong, please try again!</h2>";
-    divListings.style.color = "red";
     console.error(error);
   }
 }
