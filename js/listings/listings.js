@@ -39,7 +39,6 @@ export async function getListings(listingsApi, divListings, searchPrompt) {
 
     const response = await fetch(listingsApi, listingData);
     const json = await response.json();
-    console.log(json);
 
     if (response.ok) {
       loader.style.display = "none";

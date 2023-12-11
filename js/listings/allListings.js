@@ -15,7 +15,6 @@ const allListingsApi = api + listings + "?_seller=true&_bids=true";
 
 search.addEventListener("click", () => {
   const searchPrompt = prompt("Search for a listing");
-  console.log(searchPrompt);
   getListings(allListingsApi, listingsDiv, searchPrompt);
 });
 
