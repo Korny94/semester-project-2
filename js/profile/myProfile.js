@@ -54,8 +54,7 @@ profilePic.addEventListener("click", () => {
     alert("You can only change your own profile picture");
   } else {
     const avatar = prompt("Input image URL to change your profile picture");
-    if (avatar == null || avatar == "") {
-    } else {
+    if (avatar != null || avatar != "") {
       updateProfile(avatar, myProfileApi);
     }
   }
@@ -75,7 +74,6 @@ async function updateProfile(avatar, myProfileApi) {
     };
     const response = await fetch(myProfileApi, updateProfileData);
     const json = await response.json();
-    console.log(json);
     location.reload();
   } catch (error) {
     console.error(error);
