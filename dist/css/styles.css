@@ -12082,12 +12082,8 @@ a {
 }
 
 .welcomeBtns {
-  width: 50%;
+  width: 80%;
   font-weight: 600;
-}
-
-#welcomeLoginBtn {
-  width: 40%;
 }
 
 @media (max-width: 991.5px) {
