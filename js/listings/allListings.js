@@ -14,8 +14,6 @@ const allListingsApi = api + listings + "?_seller=true&_bids=true";
 
 getListings(allListingsApi, listingsDiv);
 
-console.dir(listingsDiv);
-
 arrowLeftAll.addEventListener("click", () => {
   listingsDiv.style.scrollBehavior = "smooth";
   listingsDiv.scrollLeft -= 500;

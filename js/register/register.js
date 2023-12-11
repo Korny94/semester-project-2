@@ -32,7 +32,6 @@ async function registerUser() {
       loginModal.style.display = "block";
     }
 
-    console.log(json);
     if (json.errors) {
       if (
         json.errors[0].message ==

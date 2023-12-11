@@ -86,7 +86,6 @@ async function newListing() {
     };
     const response = await fetch(api + listings, newListingData);
     const json = await response.json();
-    console.log(json);
     if (json.errors) {
       alert(json.errors[0].message);
     }

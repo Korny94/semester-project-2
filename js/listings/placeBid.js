@@ -18,7 +18,6 @@ export async function placeBid(listingId, bid) {
       placeBidData
     );
     const json = await response.json();
-    console.log(json);
     if (json.errors) {
       alert(json.errors[0].message);
     }

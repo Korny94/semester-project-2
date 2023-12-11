@@ -22,10 +22,7 @@ if (active) {
     "profileApi",
     api + profiles + "/" + myName + "?_listings=true"
   );
-} else {
-  console.log("not active");
 }
-
 export async function getListings(listingsApi, divListings) {
   try {
     const listingData = {
@@ -45,8 +42,6 @@ export async function getListings(listingsApi, divListings) {
     const sortedPosts = json.sort(
       (a, b) => new Date(b.created) - new Date(a.created)
     );
-
-    console.log(sortedPosts);
 
     sortedPosts.forEach((listing) => {
       let bidsHTML = "";

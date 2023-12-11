@@ -26,7 +26,6 @@ async function loginUser() {
     };
     const response = await fetch(api + login, loginData);
     const json = await response.json();
-    console.log(json);
 
     if (json.errors) {
       if (json.errors[0].message == "Email must be a valid email") {

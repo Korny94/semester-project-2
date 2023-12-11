@@ -13,7 +13,6 @@ const myListingsApi =
   "/" +
   localStorage.getItem("name") +
   "/listings?_seller=true&_bids=true";
-console.log(myListingsDiv);
 getListings(myListingsApi, myListingsDiv);
 
 arrowLeftMy.addEventListener("click", () => {

@@ -36,7 +36,6 @@ export async function getProfile(profileApi) {
     };
     const response = await fetch(profileApi, userData);
     const json = await response.json();
-    console.log(json);
     profilePic.src = json.avatar
       ? json.avatar
       : "https://cdn.pixabay.com/photo/2017/02/16/12/01/professions-2071316_1280.jpg";
@@ -56,7 +55,6 @@ profilePic.addEventListener("click", () => {
   } else {
     const avatar = prompt("Input image URL to change your profile picture");
     if (avatar == null || avatar == "") {
-      console.log("User cancelled the prompt");
     } else {
       updateProfile(avatar, myProfileApi);
     }
