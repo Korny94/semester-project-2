@@ -11940,7 +11940,8 @@ main {
   align-items: center;
 }
 
-.registerModal {
+.registerModal,
+.welcomeModal {
   margin-top: 5rem;
   box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
 }
@@ -12056,6 +12057,17 @@ a {
 .profilePic:hover,
 #viewBids:hover {
   scale: 1.05;
+}
+
+#loginBtn,
+#guestLoginBtn,
+#registerBtn,
+#guestLoginBtn2 {
+  width: 44%;
+}
+
+.welcomeBtns {
+  width: 45%;
 }
 
 @media (max-width: 991.5px) {

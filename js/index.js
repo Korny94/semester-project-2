@@ -5,20 +5,32 @@ import {
   loginModal,
   signInLink,
   signUpLink,
+  welcomeModal,
+  welcomeGuestBtn,
+  welcomeLoginBtn,
+  welcomeRegisterBtn,
 } from "./consts/consts.js";
 localStorage.clear();
 
+welcomeModal.style.display = "block";
+
+const guestLogin = () => {
+  location.href = "../html/listings.html";
+  localStorage.setItem("token", "guest");
+  localStorage.setItem("credits", "0");
+};
+
+welcomeGuestBtn.addEventListener("click", () => {
+  guestLogin();
+});
+
 guestLoginBtn.addEventListener("click", () => {
-  location.href = "../html/listings.html";
-  localStorage.setItem("token", "guest");
-  localStorage.setItem("credits", "0");
+  guestLogin();
 });
+
 guestLoginBtn2.addEventListener("click", () => {
-  location.href = "../html/listings.html";
-  localStorage.setItem("token", "guest");
-  localStorage.setItem("credits", "0");
+  guestLogin();
 });
-registerModal.style.display = "block";
 
 signInLink.addEventListener("click", () => {
   registerModal.style.display = "none";
@@ -28,4 +40,14 @@ signInLink.addEventListener("click", () => {
 signUpLink.addEventListener("click", () => {
   registerModal.style.display = "block";
   loginModal.style.display = "none";
+});
+
+welcomeLoginBtn.addEventListener("click", () => {
+  welcomeModal.style.display = "none";
+  loginModal.style.display = "block";
+});
+
+welcomeRegisterBtn.addEventListener("click", () => {
+  welcomeModal.style.display = "none";
+  registerModal.style.display = "block";
 });

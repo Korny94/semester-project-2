@@ -4,6 +4,10 @@ export const login = "/auction/auth/login";
 export const listings = "/auction/listings";
 export const profiles = "/auction/profiles";
 
+export const welcomeRegisterBtn = document.getElementById("welcomeRegisterBtn");
+export const welcomeLoginBtn = document.getElementById("welcomeLoginBtn");
+export const welcomeGuestBtn = document.getElementById("welcomeGuestBtn");
+export const welcomeModal = document.getElementById("welcomeModal");
 export const arrowLeftAll = document.getElementById("arrowLeftAll");
 export const arrowRightAll = document.getElementById("arrowRightAll");
 export const arrowLeftMy = document.getElementById("arrowLeftMy");

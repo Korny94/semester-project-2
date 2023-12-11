@@ -54,6 +54,56 @@
     <main>
       <div
         class="modal position-relative justify-content-center"
+        id="welcomeModal"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content p-2 welcomeModal" style="min-width: 30vw">
+            <div class="modal-header d-flex justify-content-center">
+              <h5 class="modal-title" id="createActTitle">
+                Welcome To biDazzle!
+              </h5>
+            </div>
+            <div class="modal-body">
+              <h6 class="text-center">
+                biDazzle is a platform for students to buy, sell and bid on
+                their own products.
+              </h6>
+              <h6 class="text-center">
+                To get started, you can either create an account, log in as a
+                user or as a guest.
+              </h6>
+            </div>
+            <div
+              class="modal-footer d-flex align-items-center justify-content-center ps-0 pe-0"
+            >
+              <button
+                type="button"
+                id="welcomeRegisterBtn"
+                class="btn btn-primary welcomeBtns m-2"
+              >
+                Create account
+              </button>
+              <button
+                type="button"
+                id="welcomeLoginBtn"
+                class="btn btn-primary welcomeBtns m-2"
+              >
+                Log in
+              </button>
+              <button
+                type="button"
+                id="welcomeGuestBtn"
+                class="btn btn-secondary welcomeBtns m-2"
+              >
+                Guest login
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="modal position-relative justify-content-center"
         id="registerModal"
       >
         <div class="modal-dialog">
@@ -104,19 +154,19 @@
               </div>
             </div>
             <div
-              class="modal-footer d-flex align-items-center justify-content-center"
+              class="modal-footer d-flex align-items-center justify-content-center ps-0 pe-0"
             >
               <button
                 type="button"
                 id="registerBtn"
-                class="btn btn-primary ps-5 pe-5 m-2"
+                class="btn btn-primary m-2"
               >
                 Create account
               </button>
               <button
                 type="button"
                 id="guestLoginBtn2"
-                class="btn btn-secondary ps-5 pe-5 m-2"
+                class="btn btn-secondary m-2"
               >
                 Guest login
               </button>
@@ -175,19 +225,15 @@
               </div>
             </div>
             <div
-              class="modal-footer d-flex align-items-center justify-content-center"
+              class="modal-footer d-flex align-items-center justify-content-center ps-0 pe-0"
             >
-              <button
-                type="submit"
-                id="loginBtn"
-                class="btn btn-primary ps-5 pe-5 m-2"
-              >
+              <button type="submit" id="loginBtn" class="btn btn-primary m-2">
                 Log in
               </button>
               <button
                 type="button"
                 id="guestLoginBtn"
-                class="btn btn-secondary ps-5 pe-5 m-2"
+                class="btn btn-secondary m-2"
               >
                 Guest login
               </button>
