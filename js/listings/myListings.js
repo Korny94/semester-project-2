@@ -14,13 +14,7 @@ const myListingsApi =
   "/" +
   localStorage.getItem("name") +
   "/listings?_seller=true&_bids=true";
-getListings(myListingsApi, myListingsDiv);
-
-if (myListingsDiv.innerHTML == "") {
-  setTimeout(() => {
-    myListingsDiv.innerHTML = "<h2>No listings found!</h2>";
-  }, 3000);
-}
+getListings(myListingsApi, myListingsDiv, "");
 
 arrowLeftMy.addEventListener("click", () => {
   myListingsDiv.style.scrollBehavior = "smooth";
