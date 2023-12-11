@@ -6,13 +6,19 @@ import {
   myName,
   arrowLeftAll,
   arrowRightAll,
+  search,
 } from "../consts/consts.js";
 
 localStorage.setItem("name", myName);
 
 const allListingsApi = api + listings + "?_seller=true&_bids=true";
 
-getListings(allListingsApi, listingsDiv);
+search.addEventListener("click", () => {
+  const searchPrompt = prompt("Search for a listing");
+  getListings(allListingsApi, listingsDiv, searchPrompt);
+});
+
+getListings(allListingsApi, listingsDiv, "");
 
 arrowLeftAll.addEventListener("click", () => {
   listingsDiv.style.scrollBehavior = "smooth";

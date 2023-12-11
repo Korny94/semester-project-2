@@ -17,6 +17,10 @@ import {
   currentDate,
 } from "../consts/consts.js";
 
+if (token == "guest") {
+  newListings.style.display = "none";
+}
+
 currentDate.setHours(currentDate.getHours() + 2);
 const twoHoursLater = currentDate.toISOString().slice(0, 16);
 postDate.value = twoHoursLater;

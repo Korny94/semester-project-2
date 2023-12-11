@@ -5,6 +5,7 @@ import {
   profiles,
   arrowLeftMy,
   arrowRightMy,
+  loader,
 } from "../consts/consts.js";
 
 const myListingsApi =
@@ -13,7 +14,7 @@ const myListingsApi =
   "/" +
   localStorage.getItem("name") +
   "/listings?_seller=true&_bids=true";
-getListings(myListingsApi, myListingsDiv);
+getListings(myListingsApi, myListingsDiv, "");
 
 arrowLeftMy.addEventListener("click", () => {
   myListingsDiv.style.scrollBehavior = "smooth";

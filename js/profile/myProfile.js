@@ -79,31 +79,3 @@ async function updateProfile(avatar, myProfileApi) {
     console.error(error);
   }
 }
-
-// viewBids.addEventListener("click", () => {
-//   if (viewBids.innerHTML == "View bids") {
-//     viewBids.innerHTML = "View listings";
-//     viewBids.style.left = "3.6rem";
-//     myBids(myBidsApi);
-//   } else {
-//     viewBids.innerHTML = "View bids";
-//     viewBids.style.left = "4rem";
-//   }
-// });
-
-// async function myBids(myBidsApi) {
-//   try {
-//     const myBidsData = {
-//       method: "GET",
-//       headers: {
-//         "Content-Type": "application/json",
-//         authorization: `Bearer ${token}`,
-//       },
-//     };
-//     const response = await fetch(myBidsApi, myBidsData);
-//     const json = await response.json();
-//     console.log(json);
-//   } catch (error) {
-//     console.error(error);
-//   }
-// }
