@@ -240,7 +240,22 @@ a {
   opacity: 0.45;
   cursor: pointer;
 }
+.bidAmount {
+  background-color: $primary;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid black;
+  border-radius: 10px;
+  color: white;
+  font-weight: 600;
+}
 
+.profileLink {
+  max-width: 60%;
+}
+
+.modal-comment-name {
+  overflow: hidden;
+}
 // Media Queries
 
 @media (max-width: 991.5px) {

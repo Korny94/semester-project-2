@@ -12093,6 +12093,23 @@ a {
   cursor: pointer;
 }
 
+.bidAmount {
+  background-color: #ff961e;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid black;
+  border-radius: 10px;
+  color: white;
+  font-weight: 600;
+}
+
+.profileLink {
+  max-width: 60%;
+}
+
+.modal-comment-name {
+  overflow: hidden;
+}
+
 @media (max-width: 991.5px) {
   .arrowLeft,
   .arrowRight {
