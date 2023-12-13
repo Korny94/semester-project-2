@@ -118,7 +118,7 @@ export async function getListings(listingsApi, divListings, searchPrompt) {
                 </div>
                 <div class="modal-footer mb-1 d-flex align-items-center justify-content-center">
                 <input type="number" class="form-control" id="bidAmount_${listingId}" placeholder="Place bid" style="width: 60%" />
-                <button type="button" class="btn btn-primary" title="${listingId}" id="bidBtn_${listingId}" style="width: 30%; font-weight: 600">Bid</button>
+                <button type="button" class="btn btn-primary bidBtn" title="${listingId}" id="bidBtn_${listingId}" style="width: 30%; font-weight: 600">Bid</button>
                 </div>
             </div>
         </div>
