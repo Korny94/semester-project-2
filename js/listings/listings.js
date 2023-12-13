@@ -62,14 +62,14 @@ export async function getListings(listingsApi, divListings, searchPrompt) {
         bids.forEach((bid) => {
           const bidder = bid.bidderName;
           bidsHTML += `
-          <div class="modal-comment border d-flex m-2 p-1 pb-3" style="border-radius: 10px">
+          <div class="modal-comment border d-flex m-2 p-1 pb-3 justify-content-between" style="border-radius: 10px">
               <div title="${bidder}" class="profileLink d-flex align-items-center">
                   <h6 class="modal-comment-name m-0 ms-3 mt-2">${bidder}:</h6>
               </div>
     
-              <div class="m-2 mb-0 ms-4">
-                  $${bid.amount}
-              </div>
+              <p class="m-2 mb-0 ms-4 bidAmount" >
+                 $${bid.amount}
+              </p>
           </div>
           `;
         });
@@ -118,7 +118,7 @@ export async function getListings(listingsApi, divListings, searchPrompt) {
                 </div>
                 <div class="modal-footer mb-1 d-flex align-items-center justify-content-center">
                 <input type="number" class="form-control" id="bidAmount_${listingId}" placeholder="Place bid" style="width: 60%" />
-                <button type="button" class="btn btn-primary" title="${listingId}" id="bidBtn_${listingId}" style="width: 30%">Bid</button>
+                <button type="button" class="btn btn-primary" title="${listingId}" id="bidBtn_${listingId}" style="width: 30%; font-weight: 600">Bid</button>
                 </div>
             </div>
         </div>
