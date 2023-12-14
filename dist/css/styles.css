@@ -11903,14 +11903,13 @@ nav {
   position: absolute;
   top: 27rem;
   width: 5vw;
-  opacity: 0.2;
+  opacity: 1;
   cursor: pointer;
   transition: ease-in-out 0.2s;
 }
 
 .arrowLeft:hover,
 .arrowRight:hover {
-  opacity: 0.4;
   scale: 1.1;
 }
 
