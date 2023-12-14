@@ -34,7 +34,13 @@
           alt="Credits"
           title="Credits left"
         />
-        <img src="../assets/search.png" id="search" />
+        <img
+          src="../assets/search.png"
+          id="search"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasTop"
+          aria-controls="offcanvasTop"
+        />
 
         <div
           class="btn"
@@ -85,6 +91,40 @@
       </div>
     </nav>
     <main>
+      <div
+        class="offcanvas offcanvas-top"
+        tabindex="-1"
+        id="offcanvasTop"
+        aria-labelledby="offcanvasTopLabel"
+      >
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasTopLabel">
+            Search for a listing
+          </h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+            id="offcanvasTopClose"
+          ></button>
+        </div>
+        <div class="offcanvas-body">
+          <div class="input-group mb-3" style="max-width: 500px">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Search listings"
+              aria-label="Recipient's username"
+              aria-describedby="button-addon2"
+              id="searchInput"
+            />
+            <button class="btn btn-primary" type="button" id="searchBtn">
+              Search
+            </button>
+          </div>
+        </div>
+      </div>
       <img src="../assets/arrowLeft.png" id="arrowLeftAll" class="arrowLeft" />
       <img
         src="../assets/arrowRight.png"

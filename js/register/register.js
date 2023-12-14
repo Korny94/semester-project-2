@@ -13,19 +13,19 @@ registerBtn.addEventListener("click", () => {
 });
 
 registerUsername.addEventListener("keyup", (event) => {
-  if (event.keyCode === 13) {
+  if (event.key === "Enter") {
     registerUser();
   }
 });
 
 registerEmail.addEventListener("keyup", (event) => {
-  if (event.keyCode === 13) {
+  if (event.key === "Enter") {
     registerUser();
   }
 });
 
 registerPassword.addEventListener("keyup", (event) => {
-  if (event.keyCode === 13) {
+  if (event.key === "Enter") {
     registerUser();
   }
 });
