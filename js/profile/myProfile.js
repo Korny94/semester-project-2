@@ -12,10 +12,6 @@ import {
   //   viewBids,
 } from "../consts/consts.js";
 
-if (name === myName) {
-  myProfilePage.classList.add("active");
-}
-
 myProfilePage.addEventListener("click", () => {
   localStorage.setItem("name", myName);
   localStorage.setItem(
