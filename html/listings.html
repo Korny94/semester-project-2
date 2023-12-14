@@ -24,32 +24,36 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <a href="/html/listings.html" class="logoLink2"></a>
+      <a href="/html/listings.html" class="logoLink2" id="homeLogo"></a>
 
       <div class="d-flex align-items-center justify-content-center creditsDiv">
-        <p id="credits" title="Credits left"></p>
-        <img
-          src="/assets/credits.png"
-          class="img-fluid me-4 credits"
-          alt="Credits"
-          title="Credits left"
-        />
         <img
           src="../assets/search.png"
           id="search"
+          alt="Search"
+          title="Search"
           data-bs-toggle="offcanvas"
           data-bs-target="#offcanvasTop"
           aria-controls="offcanvasTop"
         />
 
-        <div
-          class="btn"
-          style="color: black"
-          id="newListing"
-          title="Create new listing"
-        >
-          New +
+        <div class="d-flex align-items-center">
+          <p id="credits" title="Credits left"></p>
+          <img
+            src="/assets/credits.png"
+            class="img-fluid me-3 credits"
+            alt="Credits"
+            title="Credits left"
+          />
         </div>
+
+        <img
+          src="../assets/newListing.png"
+          alt="New listing"
+          title="New listing"
+          class="img-fluid newListing"
+          id="newListing"
+        />
       </div>
       <button
         class="navbar-toggler me-3"
@@ -68,24 +72,34 @@
       >
         <ul class="nav nav-pills d-flex justify-content-center">
           <li class="nav-item">
-            <a class="nav-link" href="/html/myProfile.html" id="profilePage"
-              >Profile</a
-            >
-          </li>
-
-          <li class="nav-item d-flex">
-            <a
-              class="nav-link active"
-              href="/html/listings.html"
-              id="listingsPage"
-              >Listings</a
-            >
+            <a class="nav-link" href="/html/myProfile.html" id="profilePage">
+              <img
+                src="../assets/profile.png"
+                alt="My Profile"
+                title="My Profile"
+                class="img-fluid menuIcons"
+              />
+            </a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="/index.html" style="font-weight: 700"
-              >Log out</a
-            >
+            <a class="nav-link" href="/html/listings.html" id="listingsPage">
+              <img
+                src="../assets/listings.png"
+                alt="Listings"
+                title="Listings"
+                class="img-fluid menuIcons"
+            /></a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/index.html"
+              ><img
+                src="../assets/loginOut.png"
+                alt="Log out"
+                title="Log out"
+                class="img-fluid menuIcons"
+            /></a>
           </li>
         </ul>
       </div>

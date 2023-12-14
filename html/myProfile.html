@@ -24,25 +24,24 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <a href="/html/listings.html" class="logoLink2"></a>
 
-      <div
-        class="d-flex align-items-center justify-content-center creditsDiv"
-        title="Credits left"
-      >
-        <p id="credits"></p>
+      <div class="d-flex align-items-center justify-content-center creditsDiv">
+        <div class="d-flex align-items-center">
+          <p id="credits" title="Credits left"></p>
+          <img
+            src="/assets/credits.png"
+            class="img-fluid me-3 credits"
+            alt="Credits"
+            title="Credits left"
+          />
+        </div>
 
         <img
-          src="/assets/credits.png"
-          class="img-fluid me-4 credits"
-          alt="Credits"
-        />
-        <div
-          class="btn"
-          style="color: black"
+          src="../assets/newListing.png"
+          alt="New listing"
+          title="New listing"
+          class="img-fluid newListing"
           id="newListing"
-          title="Create new listing"
-        >
-          New +
-        </div>
+        />
       </div>
       <button
         class="navbar-toggler me-3"
@@ -61,15 +60,34 @@
       >
         <ul class="nav nav-pills d-flex justify-content-center">
           <li class="nav-item">
-            <a class="nav-link" href="" id="myProfilePage">Profile</a>
+            <a class="nav-link" href="/html/myProfile.html" id="profilePage">
+              <img
+                src="../assets/profile.png"
+                alt="My Profile"
+                title="My Profile"
+                class="img-fluid menuIcons"
+              />
+            </a>
           </li>
+
           <li class="nav-item">
-            <a class="nav-link" href="/html/listings.html">Listings</a>
+            <a class="nav-link" href="/html/listings.html" id="listingsPage">
+              <img
+                src="../assets/listings.png"
+                alt="Listings"
+                title="Listings"
+                class="img-fluid menuIcons"
+            /></a>
           </li>
+
           <li class="nav-item">
-            <a class="nav-link" href="../index.html" style="font-weight: 700"
-              >Log out</a
-            >
+            <a class="nav-link" href="/index.html"
+              ><img
+                src="../assets/loginOut.png"
+                alt="Log out"
+                title="Log out"
+                class="img-fluid menuIcons"
+            /></a>
           </li>
         </ul>
       </div>
