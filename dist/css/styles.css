@@ -11937,6 +11937,8 @@ nav {
   height: 18px;
   background-size: cover;
   margin: 0 0 0.3rem 1rem;
+  cursor: pointer;
+  z-index: 1000;
 }
 
 main {
@@ -11955,16 +11957,22 @@ main {
 }
 
 .credits {
-  width: 1.8rem;
+  height: 1rem;
+  margin-bottom: -0.1rem;
 }
 
 #credits {
-  margin: 0 0.5rem 0.2rem 0;
+  margin: 0 0.2rem 0 0;
+  font-weight: 600;
+  font-size: 1.3rem;
 }
 
 .creditsDiv {
   position: absolute;
-  right: 18rem;
+  right: 0;
+  left: 0;
+  display: flex;
+  gap: 5vw;
 }
 
 #listingsDiv,
@@ -12095,11 +12103,19 @@ a {
   font-weight: 600;
 }
 
-#search {
-  width: 1.5rem;
+#search,
+.newListing {
+  width: 1.7rem;
   margin: 0 1rem 0 0;
-  opacity: 0.45;
+  opacity: 0.7;
   cursor: pointer;
+  transition: ease-in-out 0.2s;
+}
+
+#search:hover,
+.newListing:hover {
+  opacity: 0.8;
+  scale: 1.1;
 }
 
 .bidAmount {
@@ -12137,6 +12153,16 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.menuIcons {
+  height: 2rem;
+  transition: ease-in-out 0.2s;
+  opacity: 0.9;
+}
+
+.menuIcons:hover {
+  scale: 1.1;
 }
 
 @media (max-width: 991.5px) {
