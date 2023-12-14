@@ -280,6 +280,12 @@ a {
   scale: 1.05;
 }
 
+.offcanvas-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 // Media Queries
 
 @media (max-width: 991.5px) {

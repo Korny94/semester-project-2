@@ -12,14 +12,14 @@ loginBtn.addEventListener("click", () => {
 });
 
 loginEmail.addEventListener("keyup", (event) => {
-  if (event.keyCode === 13) {
+  if (event.key === "Enter") {
     event.preventDefault();
     loginUser();
   }
 });
 
 loginPassword.addEventListener("keyup", (event) => {
-  if (event.keyCode === 13) {
+  if (event.key === "Enter") {
     event.preventDefault();
     loginUser();
   }
