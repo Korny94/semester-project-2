@@ -24,6 +24,7 @@ export function calculateTimeRemaining(endDate) {
     return message;
   } else {
     // If the end date is in the past, return a message indicating that the listing has ended
+
     return "Listing has ended.";
   }
 }
