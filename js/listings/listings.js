@@ -45,6 +45,7 @@ export async function getListings(listingsApi, divListings, searchPrompt) {
     }
 
     divListings.innerHTML = "";
+    console.log(json);
     json.forEach((listing) => {
       const jsonTags = listing.tags || [];
       const jsonTitle = listing.title || "";
@@ -59,7 +60,8 @@ export async function getListings(listingsApi, divListings, searchPrompt) {
         let bidsHTML = "";
 
         const bids = listing.bids ? listing.bids : [];
-        bids.forEach((bid) => {
+        const sortedBids = bids.sort((a, b) => a.amount - b.amount);
+        sortedBids.forEach((bid) => {
           const bidder = bid.bidderName;
           bidsHTML += `
           <div class="modal-comment border d-flex m-2 p-1 pb-3 justify-content-between" style="border-radius: 10px">
