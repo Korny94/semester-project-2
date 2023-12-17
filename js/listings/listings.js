@@ -45,7 +45,6 @@ export async function getListings(listingsApi, divListings, searchPrompt) {
     }
 
     divListings.innerHTML = "";
-    console.log(json);
     json.forEach((listing) => {
       const jsonTags = listing.tags || [];
       const jsonTitle = listing.title || "";
@@ -140,7 +139,6 @@ export async function getListings(listingsApi, divListings, searchPrompt) {
           const lastComment = comments[comments.length - 1];
 
           if (lastComment) {
-            console.log(lastComment);
             lastComment.style.backgroundColor = "green";
             lastComment.style.color = "white";
           }
