@@ -45,6 +45,7 @@ export async function getListings(listingsApi, divListings, searchPrompt) {
     }
 
     divListings.innerHTML = "";
+    console.log(json);
     json.forEach((listing) => {
       const jsonTags = listing.tags || [];
       const jsonTitle = listing.title || "";
@@ -59,7 +60,8 @@ export async function getListings(listingsApi, divListings, searchPrompt) {
         let bidsHTML = "";
 
         const bids = listing.bids ? listing.bids : [];
-        bids.forEach((bid) => {
+        const sortedBids = bids.sort((a, b) => a.amount - b.amount);
+        sortedBids.forEach((bid) => {
           const bidder = bid.bidderName;
           bidsHTML += `
           <div class="modal-comment border d-flex m-2 p-1 pb-3 justify-content-between" style="border-radius: 10px">
@@ -111,7 +113,7 @@ export async function getListings(listingsApi, divListings, searchPrompt) {
                     ${description}
                 </div>
                 <div class="modal-commentCount">
-                    <h6 class="text-center" style="font-size: .85rem; opacity: .5">${listingMessage}</h6>
+                    <h6 class="text-center" style="font-size: .85rem; opacity: .5" alt="${listingId}">${listingMessage}</h6>
                 </div>
                 <div class="modal-comments">
                     ${bidsHTML}
@@ -125,6 +127,25 @@ export async function getListings(listingsApi, divListings, searchPrompt) {
       </div>`
         );
         divListings.appendChild(listingDiv);
+
+        const endedListing = listingDiv.querySelector(".modal-commentCount");
+        if (listingMessage == "Listing has ended.") {
+          endedListing.style.color = "red";
+          listingDiv.querySelector(".bidBtn").disabled = true;
+          listingDiv.querySelector(".bidBtn").style.width = "100%";
+          listingDiv.querySelector(".bidBtn").innerHTML = "Listing has ended";
+          listingDiv.querySelector("input").style.display = "none";
+
+          const comments = listingDiv.querySelectorAll(".modal-comment");
+          const lastComment = comments[comments.length - 1];
+
+          if (lastComment) {
+            console.log(lastComment);
+            lastComment.style.backgroundColor = "green";
+            lastComment.style.color = "white";
+          }
+        }
+
         const modalComments = listingDiv.querySelector(".modal-comments");
         modalComments.scrollTop = modalComments.scrollHeight;
 

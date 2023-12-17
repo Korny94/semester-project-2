@@ -50,7 +50,7 @@ profilePic.addEventListener("click", () => {
     alert("You can only change your own profile picture");
   } else {
     const avatar = prompt("Input image URL to change your profile picture");
-    if (avatar != null || avatar != "") {
+    if (avatar.length > 0) {
       updateProfile(avatar, myProfileApi);
     }
   }

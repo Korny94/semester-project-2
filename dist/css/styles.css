@@ -11981,7 +11981,7 @@ main {
   right: 0;
   left: 0;
   display: flex;
-  gap: 5vw;
+  gap: 8vw;
 }
 
 #listingsDiv,
@@ -12114,8 +12114,7 @@ a {
 
 #search,
 .newListing {
-  width: 1.7rem;
-  margin: 0 1rem 0 0;
+  width: 1.4rem;
   opacity: 0.7;
   cursor: pointer;
   transition: ease-in-out 0.2s;
@@ -12217,6 +12216,7 @@ a {
   }
   #newListing {
     padding-left: 0rem;
+    margin-left: -1rem;
     color: black;
   }
   .profilePic {
