@@ -66,6 +66,7 @@ postListing.addEventListener("click", () => {
   if (postTitle.value == "") {
     alert("Title cannot be empty");
   } else {
+    postListing.disabled = true;
     newListing();
   }
 });

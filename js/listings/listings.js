@@ -98,12 +98,12 @@ export async function getListings(listingsApi, divListings, searchPrompt) {
             <div class="modal-content postModal">
                 <div class="modal-header p-3">
                 <div class="profileLink d-flex align-items-center" style="cursor: pointer" id="otherProfile_${seller}" title="${seller}">
-                    <img class="modal-profile-image me-2" src="${imageProfile}" alt="" />
+                    <img class="modal-profile-image me-2" src="${imageProfile}" alt="Profile picture" />
                     <h5 class="modal-name m-0">${seller}</h5>
                 </div>
                 </div>
                 <div class="modal-image">
-                  <img id="modalImage" src="${image}" alt="" />
+                  <img id="modalImage" src="${image}" alt="Product image" />
                 </div>
                 <div class="modal-title mt-2" style="height: 1.5rem; overflow: hidden; cursor: pointer;">
                     <h5 class="text-center m-0"  title="${title}">${title}</h5>
