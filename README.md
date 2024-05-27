@@ -1,110 +1,53 @@
-# semester-project-2
+# Semester-Project-2
 
-Semester Project 2
+![image](https://github.com/Korny94/semester-project-2/blob/main/assets/sP2Overview.png)
 
-Goal
+## Description
 
-The aim of this project is to apply learned skills to develop a functional auction website.
+An auction platform where users can list items for auction and bid on items listed by others.
 
-Brief
+## Built With
 
-The project involves creating an auction platform where users can list items for auction and bid on available items.
+- [Bootstrap](https://getbootstrap.com/)
+- [Sass](https://sass-lang.com/)
 
-New users receive an initial credit of 1000 upon registration, earned through selling items or utilized for purchases. Unregistered users can search listings, while bidding is reserved for registered users.
+## Getting Started
 
-Requirements
+### Installing
 
-This project solely focuses on building the front-end application for an existing API.
+1. Clone the repo:
 
-API
+```bash
+git clone git@github.com:Korny94/semester-project-2.git
+```
 
-The API documentation can be found under Auction EndPoints in the Noroff API documentation.
+2. Install the dependencies:
 
-Resources
+```
+npm install
+```
 
-https://api.noroff.dev/docs/static/index.html
+### Running
 
-User Stories
+To run the app, run the following commands:
 
-The client has outlined the following requirements in user story format:
+```bash
+npm run start
+```
 
-Registration for stud.noroff.no email users
-User login and logout functionality
-Avatar updates for users
-Viewing total credit
-Creation of listings with title, deadline, media, and descriptions
-Placing bids on available listings
-Viewing bids made on listings
+## Contributing
 
-Technical Restrictions
+1. Make your changes and commit them:
 
-The technical constraints set by the company CTO include:
+    ```bash
+    git add .
+    git commit -m "Description of your changes"
+    ```
 
-Mandatory use of an approved CSS Framework
-Hosting on an approved Static Host
-Utilization of an approved Design Application
-Use of an approved Planning Application
+2. Push to your branch and open a pull request.
 
-Required Links
+## Contact
 
-The Product Owner has requested links to the following:
+[My Portfolio page](https://karlmagnusnokling.no)
 
-Gantt chart for project timing
-Design prototype
-Style guide
-Kanban project board
-Repository link
-Hosted application demo link
 
-Resources
-
-CSS Processors
-
-SASS/SCSS
-PostCSS
-
-CSS Frameworks
-
-Bootstrap (>5.0.1)
-
-Hosting Services
-
-Netlify
-
-Design Applications
-
-Figma
-
-Planning Applications
-
-GitHub Projects
-https://www.teamgantt.com/
-
-Setting Up and Running Locally
-
-Open GitHub:
-
-Go to GitHub and sign in to your account.
-
-Find the Repository:
-
-Navigate to https://github.com/Korny94/semester-project-2 (the repository you want to clone).
-Clone the Repository:
-
-Click on the green "Code" button on the right side of the repository page.
-In the dropdown that appears, click on "Download ZIP".
-Save the ZIP File:
-
-Choose a location on your computer to save the downloaded ZIP file.
-Once the download is complete, locate and extract the contents of the ZIP file.
-Open in Desired Code Editor:
-
-Open your preferred code editor.
-Use the "Open" or "Open Folder" option to browse and select the extracted folder from the cloned repository.
-
-Run the command in terminal to start the project using npm run watch
-
-Run the Project:
-
-Locate the project's main file, such as index.html or main.js.
-Right-click on this file and choose an option like "Open with Live Server" or "Open in Browser".
