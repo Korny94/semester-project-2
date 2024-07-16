@@ -51,7 +51,3 @@ welcomeRegisterBtn.addEventListener("click", () => {
   welcomeModal.style.display = "none";
   registerModal.style.display = "block";
 });
-
-alert(
-  "To test the application, please use the following credentials:\n\nEmail: testkarl@stud.noroff.no\nPassword: testkarl"
-);

@@ -4,8 +4,6 @@ import {
   listings,
   listingsDiv,
   myName,
-  arrowLeftAll,
-  arrowRightAll,
   search,
   searchBtn,
   searchInput,
@@ -35,14 +33,3 @@ search.addEventListener("click", () => {
 });
 
 getListings(allListingsApi, listingsDiv, "");
-
-arrowLeftAll.addEventListener("click", () => {
-  listingsDiv.style.scrollBehavior = "smooth";
-  listingsDiv.scrollLeft -= 500;
-});
-
-arrowRightAll.addEventListener("click", () => {
-  listingsDiv.style.scrollBehavior = "smooth";
-
-  listingsDiv.scrollLeft += 500;
-});

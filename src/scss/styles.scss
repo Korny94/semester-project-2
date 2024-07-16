@@ -1,4 +1,4 @@
-$primary: #ff961e;
+$primary: #e78617;
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
@@ -130,18 +130,19 @@ main {
 
 #listingsDiv,
 #myListingsDiv {
-  margin-top: 1rem;
+  margin-top: 5rem;
   z-index: 99;
-  width: 98.7vw;
+  max-width: 1300px;
   gap: 2rem;
-  padding-left: 1rem;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   overflow-x: scroll;
   overflow-y: hidden;
 }
 
 #myListingsDiv {
-  width: 86vw;
+  width: 75vw;
 }
 
 a {
@@ -204,6 +205,9 @@ a {
 }
 
 .profilePic {
+  position: absolute;
+  top: 5rem;
+  left: 1rem;
   width: 10vw;
   height: 10vw;
   max-width: 100px;
@@ -377,21 +381,17 @@ a {
   .profilePic {
     height: 50px;
     width: 50px;
-    position: absolute;
-    top: 3rem;
-    left: 0rem;
+    top: 4rem;
   }
 
   #myListingsDiv {
-    width: 100vw;
     gap: 0;
-    max-height: 36rem;
-    margin-top: 3.5rem;
+
+    width: 95vw;
   }
 
   #listingsDiv {
     gap: 0;
-    max-height: 36rem;
   }
   .modal-comments {
     height: 6rem;
@@ -410,11 +410,6 @@ a {
 
   .modal-comments {
     height: 6rem;
-  }
-
-  #listingsDiv,
-  #myListingsDiv {
-    max-height: 35rem;
   }
 
   .profilePic {
@@ -451,12 +446,12 @@ a {
 .loader:before {
   animation: ball1 1s infinite;
   background-color: #ededed;
-  box-shadow: 30px 0 0 #ff961e;
+  box-shadow: 30px 0 0 #e78617;
   margin-bottom: 10px;
 }
 .loader:after {
   animation: ball2 1s infinite;
-  background-color: #ff961e;
+  background-color: #e78617;
   box-shadow: 30px 0 0 #ededed;
 }
 
@@ -474,15 +469,15 @@ a {
 
 @keyframes ball1 {
   0% {
-    box-shadow: 30px 0 0 #ff961e;
+    box-shadow: 30px 0 0 #e78617;
   }
   50% {
-    box-shadow: 0 0 0 #ff961e;
+    box-shadow: 0 0 0 #e78617;
     margin-bottom: 0;
     transform: translate(15px, 15px);
   }
   100% {
-    box-shadow: 30px 0 0 #ff961e;
+    box-shadow: 30px 0 0 #e78617;
     margin-bottom: 10px;
   }
 }
